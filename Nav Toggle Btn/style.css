@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  margin: 20px;
+  padding: 0;
+}
+
+.nav-toggle-btn {
+  cursor: pointer;
+  width: 40px;
+  height: 29px;
+  border: 1px solid black;
+}
+
+.nav-toggle-btn div{
+  width: 100%;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: black;
+}
+.nav-toggle-btn: hover{
+  background-color: red;
+}
+
+.nav-toggle-btn div:nth-child(2){
+  width: 50%;
+}
+
+.nav-open div {
+  background-color: red;
+}
+.nav-open div:nth-child(1) {
+  transform: rotate(45deg) translate(10px,0px);
+}
+.nav-open div:nth-child(2) {
+  display: none;
+}
+.nav-open div:nth-child(3) {
+  transform: rotate(-45deg) translate(10px,0px);
+}
