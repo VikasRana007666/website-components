@@ -1,0 +1,33 @@
+/* || Site Header */
+#site-header {
+	padding: 0 1%;
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+	align-items: center;
+}
+
+/* || Header Navigation */
+.header-navigation {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+}
+
+.header-menu {
+	display: flex;
+	justify-content: center;
+}
+
+.header-menu li {
+	margin: 0px 10px;
+}
+
+
+/* || Mob Header Navigaiton */
+.mob-header-navigation {
+	display: none;
+}
+
+/* || Mob Nav Toggler Button */
+.mob-nav-toggler {
+	display: none;
+}
