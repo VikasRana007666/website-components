@@ -1,15 +1,41 @@
 /* || Site Header */
 #site-header {
-	padding: 0 1%;
+	padding: 1%;
 	display: grid;
 	grid-template-columns: 1fr 6fr;
 	align-items: center;
+	background-color: var(--color-header-bg);
+}
+
+#site-header .short {
+	display: none;
+}
+
+@media (max-width: 650px) {
+	#site-header {
+		padding: 10px;
+	}
+
+	#site-header .wide {
+		display: none;
+	}
+
+	#site-header .short {
+		display: block;
+	}
 }
 
 /* || Header Navigation */
 .header-navigation {
 	display: grid;
 	grid-template-columns: 4fr 1fr;
+	align-items: center;
+}
+
+@media (max-width: 650px) {
+	.header-navigation {
+		display: none;
+	}
 }
 
 .header-menu {
@@ -21,13 +47,97 @@
 	margin: 0px 10px;
 }
 
-
 /* || Mob Header Navigaiton */
 .mob-header-navigation {
-	display: none;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: calc(100% - 60px);
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.mob-header-navigation .header-menu {
+	margin-top: 20px;
+	height: 80%;
+	overflow-y: scroll;
+}
+
+.mob-header-navigation form {
+	width: 50%;
+	margin: auto;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.mob-header-navigation form input:nth-child(1) {
+	border: none;
+	border-radius: 50px;
+	padding: 5px;
+}
+
+::placeholder {
+	color: black;
+}
+
+.mob-header-navigation form input:nth-child(2) {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	margin-top: 5px;
+	padding: 3px 0;
+	border: none;
+	border-radius: 50px;
 }
 
 /* || Mob Nav Toggler Button */
 .mob-nav-toggler {
+	cursor: pointer;
+ 	width: 30px;
+  	height: 29px;
 	display: none;
+	background-color: black;
+	border: none;
+	justify-self: end;
 }
+
+@media (max-width: 650px) {
+	.mob-nav-toggler {
+		display: block;
+	}
+}
+
+.mob-nav-toggler div{
+  width: 100%;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: white;
+}
+.mob-nav-toggler: hover{
+  background-color: red;
+}
+
+.mob-nav-toggler div:nth-child(2){
+  width: 50%;
+}
+
+.nav-open div {
+  background-color: red;
+}
+.nav-open div:nth-child(1) {
+  transform: rotate(45deg) translate(10px,0px);
+}
+.nav-open div:nth-child(2) {
+  display: none;
+}
+.nav-open div:nth-child(3) {
+  transform: rotate(-45deg) translate(10px,0px);
+}
+
