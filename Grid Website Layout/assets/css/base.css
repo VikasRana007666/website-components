@@ -1,9 +1,10 @@
 /* || Colors */
 :root {
-	--color-bg: rgb(70, 70, 70);
+	--color-bg: rgb(35, 35, 35);
 	--color-header-bg: rgba(0,0,0);
 	--color-text: rgba(255,255,255);
 	--color-text-hover: rgb(255, 0, 0);
+  --color-card: rgba(0,0,0);
 }
 
 /* || Base */
@@ -21,6 +22,10 @@ li {
   list-style: none;
 }
 
+.img {
+  width: 100%;
+}
+
 /* || home blog */
 
 .home {
@@ -29,33 +34,47 @@ li {
   grid-template-columns: 15px 1fr minmax(auto, 1920px) 1fr 15px;
 }
 
+@media (max-width: 650px) {
+  .home {
+    grid-template-columns: 5px 1fr minmax(auto, 1920px) 1fr 5px;
+  } 
+}
+
 #site-header {
   grid-column: 1/-1;
   grid-row: 1/2;
-  background-color: pink;
 }
 
 .header-nav-widgets-wrapper {
   grid-column: 3/4;
   grid-row: 2/3;
-  background-color: orange;
+}
+
+@media (max-width:  650px) {
+  .left-nav-widgets-wrapper {
+    display: none;
+  }
 }
 
 #site-content {
   grid-column: 3/4;
   grid-row: 3/4;
-  height: 400px;
-  background-color: lightgreen;
 }
+
+@media (max-width:  650px) {
+  .right-nav-widgets-wrapper {
+    display: none;
+  }
+}
+
 
 .footer-nav-widgets-wrapper {
   grid-column: 3/4;
   grid-row: 4/5;
-  background-color: yellow;
 }
 
 #site-footer {
   grid-column: 1/-1;
   grid-row: 5/6;
-  background-color: beige;
+  background-color: darkviolet;
 }
